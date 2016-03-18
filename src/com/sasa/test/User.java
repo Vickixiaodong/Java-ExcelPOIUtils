@@ -16,6 +16,11 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "User[name=" + this.name + ", age=" + this.age + "]";
+    }
+
     public String getName() {
         return this.name;
     }

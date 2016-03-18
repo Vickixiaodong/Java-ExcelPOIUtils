@@ -1,6 +1,7 @@
 package com.sasa.test;
 
 import com.oracle.tools.packager.Log;
+import com.sasa.utils.CollectionToObjectsList;
 import com.sasa.utils.SASAReadXLS;
 import com.sasa.utils.SASAWriteXLS;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -23,7 +24,11 @@ public class Test {
             将user.xls文件读取到程序中,这里保存在字符串中
             可以将其保存为VO对象进行其他操作,比如写入数据库中
          */
-        System.out.println(SASAReadXLS.readXLSByFileName("user.xls"));
+        //得到的是List<List<List<Map<String, String>>>>这种类型的数据结构
+        List<User> usersList = CollectionToObjectsList.convert(SASAReadXLS.readXLSByFileName("user.xls"), "com.sasa.test.User");
+        for (User user : usersList) {
+            System.out.println(user);
+        }
         System.out.println("Success~~~");
     }
 
