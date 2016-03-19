@@ -161,7 +161,7 @@ public class SASAReaderXLS {
 
         try {
             int flag = 0;
-            Object object = Class.forName(packageName).newInstance();;
+            Object object = Class.forName(packageName).newInstance();
             int modFlag = excelTitle.size();
             for (Map<String, String> cellKeyValue : excelContent) {
                 ++flag;

@@ -97,4 +97,6 @@ public class SASAWriteXLS {
 
         return dataList;
     }
+
+    // 将list<Map<String, Object>>数据转换成list<Object>
 }

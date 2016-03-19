@@ -6,21 +6,21 @@ package com.sasa.test;
 public class User {
     private String name;
     private String age;
-    private String desc;
+    private String des;
 
     public User() {
 
     }
 
-    public User(String name, String age, String desc) {
+    public User(String name, String age, String des) {
         this.name = name;
         this.age = age;
-        this.desc = desc;
+        this.des = des;
     }
 
     @Override
     public String toString() {
-        return "User[name=" + this.name + ", age=" + this.age + ", desc=" + this.desc + "]";
+        return "User[name=" + this.name + ", age=" + this.age + ", desc=" + this.des + "]";
     }
 
     public String getName() {
@@ -39,11 +39,11 @@ public class User {
         this.age = age;
     }
 
-    public String getDesc() {
-        return this.desc;
+    public String getDes() {
+        return this.des;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDes(String desc) {
+        this.des = desc;
     }
 }
