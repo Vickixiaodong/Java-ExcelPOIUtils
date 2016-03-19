@@ -41,14 +41,14 @@ public class SASAReaderXLS {
         excelRowObject = new ArrayList();
     }
 
-    public void reader() {
-        setFileNameInputStream();
-        getWorkbook();
-        getSheet();
-        getExcelTitle();
-        getExcelContent();
-        getExcelExcelContentObject();
-    }
+//    public void reader() {
+//        setFileNameInputStream();
+//        getWorkbook();
+//        getSheet();
+//        getExcelTitle();
+//        getExcelContent();
+//        getExcelExcelContentObject();
+//    }
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
@@ -154,6 +154,10 @@ public class SASAReaderXLS {
         return excelContent;
     }
 
+    /**
+     * 得到处理好的数据源
+     * @return
+     */
     public List getExcelExcelContentObject() {
         if ((null == excelContent) || (excelContent.size() == 0)) {
             getExcelContent();

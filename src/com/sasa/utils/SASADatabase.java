@@ -267,6 +267,11 @@ public class SASADatabase {
         }
     }
 
+    /**
+     * 将数据源插入到数据库中
+     * @param tableName 数据库表名
+     * @param objectList 数据源
+     */
     public void insertObjects(String tableName, List objectList) {
         for (Object object: objectList) {
             insertOneObject(tableName, object);
